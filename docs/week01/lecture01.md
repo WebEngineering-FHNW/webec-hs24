@@ -1,8 +1,8 @@
 # WebEngineering Module, HTML
 
 ## Resources:
-[Example File](https://webengineering-fhnw.github.io/webec_hs24/week01/Example.html)
-[Storybook frame](https://webengineering-fhnw.github.io/webec_hs24/week01/Storybook.html)
+[Example File](https://webengineering-fhnw.github.io/webec-hs24/week01/Example.html)
+[Storybook frame](https://webengineering-fhnw.github.io/webec-hs24/week01/Storybook.html)
 
 ## Assignment 1: 
 Using gitHub as a web server
