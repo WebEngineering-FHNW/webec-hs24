@@ -1,0 +1,15 @@
+Mi, 20.09.23 HTML
+Mi, 27.09.23 CSS
+Mi, 04.10.23 Grails, Web, MVC, Test
+Mi, 11.10.23 GSP, Template, Taglib, Layout
+Mi, 18.10.23 Persistence, DB-Access
+Mi, 25.10.23 Simple Security
+Mi, 01.11.23 REST, Services
+Mi, 08.11.23 ANWESENHEITSPLICHT! Übungsvorbereitung
+Mi, 15.11.23 Javascript
+Mi, 22.11.23 Responsive / Mobile Web
+Mi, 06.12.23 Übungsanlass
+Mi, 13.12.23 Übungsanlass
+Mi, 20.12.23 WICHTIG! Übungsabgabe
+Mi, 10.01.24 Deployment
+Mi, 17.01.24 Prüfungsvorbereitung
