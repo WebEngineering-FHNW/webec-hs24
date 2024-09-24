@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob</title>
+    <style>
+        body {
+            display: flex;
+            gap: 1em;
+            margin: 2em;
+        }
+        .blob {
+            width: 200px;
+            aspect-ratio: 1 / 1;
+            background-color: lightblue;
+            background-image: url("https://unsplash.it/200/200");
+            border: 1px solid black;
+            /*                          x   y  */
+            border-top-left-radius:     10% 50%;
+            border-top-right-radius:    50% 10%;
+            border-bottom-right-radius: 10% 50%;
+            border-bottom-left-radius:  50% 10%;
+            /*border-radius: 10% 50% 10% 50% /*/
+            /*               50% 10% 50% 10%;*/
+            box-shadow: 0.2em 0.2em .5em 0 black;
+            transition: .3s linear;
+        }
+        .blob:hover {
+            border-top-left-radius:     10% 50%;
+            border-top-right-radius:    10% 50%;
+            border-bottom-right-radius: 10% 50%;
+            border-bottom-left-radius:  10% 50%;
+            transform: translateY(-5%) scale(1.2);
+            box-shadow: 0.2em 0.2em .8em 0 black;
+            transition: .3s linear;
+        }
+    </style>
+
+</head>
+<body>
+<div class="blob"></div>
+<div class="blob"></div>
+<div class="blob"></div>
+<div class="blob"></div>
+</body>
+</html>
