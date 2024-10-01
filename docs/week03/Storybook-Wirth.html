@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Storybook for the Web Engineering Module</title>
+    <!--    <link rel="stylesheet" href="Storybook.css"> inlined by dk -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2em;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 70vw;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 1rem 1rem;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 70vw;
+            margin: 1rem auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+        }
+
+        h1, h2 {
+            color: darkblue;
+        }
+
+        p, ul {
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Style for pop-up info (abbr and dfn) */
+        abbr, dfn {
+            border-bottom: 1px dotted darkblue;
+            cursor: help;
+            color: darkblue;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        /* Holidays less prominent */
+        .holiday {
+            background-color: #f0f0f0;
+            color: #777;
+        }
+
+        /* Exercise dates more prominent */
+        .exercise {
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 70vw;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem 1rem 0 0;
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+</header>
+
+<main>
+    <section id="context">
+        <h1>Module Delivery Mode</h1>
+        <p>This installment of the <dfn title="WebEngineering">webeC</dfn> module.</p>
+    </section>
+
+    <section id="content">
+        <h1>Delivery Dates and Examination Details</h1>
+        <article>
+            <h2>Overview</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>#</th>
+                    <th>Topic</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mi, 18.09.24</td>
+                    <td>1</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>Mi, 25.09.24</td>
+                    <td>2</td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>Mi, 02.10.24</td>
+                    <td>3</td>
+                    <td>Grails, Web, MVC, Test</td>
+                </tr>
+                <tr>
+                    <td>Mi, 09.10.24</td>
+                    <td>4</td>
+                    <td>GSP, Template, Taglib, Layout</td>
+                </tr>
+                <tr>
+                    <td>Mi, 16.10.24</td>
+                    <td>5</td>
+                    <td>Persistence, DB-Access</td>
+                </tr>
+                <tr>
+                    <td>Mi, 23.10.24</td>
+                    <td>6</td>
+                    <td>Simple Security</td>
+                </tr>
+                <tr>
+                    <td>Mi, 30.10.24</td>
+                    <td>7</td>
+                    <td>REST, Services</td>
+                </tr>
+                <tr class="exercise">
+                    <td>Mi, 06.11.24</td>
+                    <td>8</td>
+                    <td>ANWESENHEITSPLICHT! Übungsvorbereitung</td>
+                </tr>
+                <tr>
+                    <td>Mi, 13.11.24</td>
+                    <td>9</td>
+                    <td>JavaScript</td>
+                </tr>
+                <tr>
+                    <td>Mi, 20.11.24</td>
+                    <td>10</td>
+                    <td>Responsive / Mobile Web</td>
+                </tr>
+                <tr  class="exercise">
+                    <td>Mi, 04.12.24</td>
+                    <td>11</td>
+                    <td>Übungsanlass</td>
+                </tr>
+                <tr class="exercise">
+                    <td>Mi, 11.12.24</td>
+                    <td>12</td>
+                    <td>Übungsanlass</td>
+                </tr>
+                <tr class="exercise">
+                    <td>Mi, 18.12.24</td>
+                    <td>13</td>
+                    <td>WICHTIG! Übungsabgabe</td>
+                </tr>
+                <tr class="holiday">
+                    <td>Mi, 08.01.25</td>
+                    <td>14</td>
+                    <td>Deployment</td>
+                </tr>
+                <tr>
+                    <td>Mi, 15.01.25</td>
+                    <td>15</td>
+                    <td>Prüfungsvorbereitung</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="3">MSP date to be announced</td>
+                </tr>
+                </tfoot>
+            </table>
+        </article>
+
+        <article>
+            <h2>Total Effort</h2>
+            <p>Classroom lectures add up to <code>15 * 3h = 45h</code>.</p>
+            <p>Prework and afterwork, including homework, add up to <code>15 * 1h = 15h</code>.</p>
+            <p>The exercise for the continuous assessment grade takes <code>4 * 5h = 20h</code>.</p>
+            <p>Preparation for the final exam will take approximately <code>8h</code>.</p>
+            <p>Writing the final exam takes <code>2h</code>.</p>
+            <p>This makes a total of <code>90h</code>.</p>
+        </article>
+
+        <article id="criteria">
+            <h2>Passing Criteria</h2>
+            <ul>
+                <li>You have to attend the exercise preparation event.</li>
+                <li>You have to do the exercise and deliver it before the deadline.</li>
+                <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
+            </ul>
+            <p>Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>.</p>
+            <p>EN and MSP together make your final grade.</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <address>Dierk König, 5.2B16, <a href="mailto:dierk.koenig@fhnw.ch">dierk.koenig@fhnw.ch</a></address>
+</footer>
+</body>
+
+</html>
