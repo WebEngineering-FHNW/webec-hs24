@@ -6,30 +6,38 @@
     <title>Storybook for the Web Engineering Module</title>
     <!--    <link rel="stylesheet" href="Storybook.css"> inlined by dk -->
     <style>
+        :root {
+            --size-corner-radius: .5rem;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 2em;
-            padding: 0;
+            font-family:    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 0.05em;
+            margin:         2em;
+            padding:        0;
         }
 
+        header, main, footer {
+            padding:            2rem;
+            max-width:          70vw;
+            background-color:   white;
+            box-shadow:         0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header, footer {
+            text-align:     center;
+            margin:         0 auto;
+        }
         header {
-            text-align: center;
-            padding: 2rem;
-            margin: 0 auto;
-            max-width: 70vw;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 0 0 1rem 1rem;
-            font-weight: bold;
+            border-radius:  0                         0
+                            var(--size-corner-radius) var(--size-corner-radius);
+            font-weight:    bold;
         }
-
         main {
-            padding: 2rem;
-            max-width: 70vw;
-            margin: 1rem auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 1rem;
+            border-radius:  var(--size-corner-radius);
+            margin:         1rem auto;
+        }
+        footer {
+            border-radius:  var(--size-corner-radius) var(--size-corner-radius)
+                            0                         0;
         }
 
         h1, h2 {
@@ -81,16 +89,7 @@
             font-weight: bold;
         }
 
-        /* Footer styles */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin: 0 auto;
-            max-width: 70vw;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 1rem 1rem 0 0;
-        }
+
 
     </style>
 </head>
