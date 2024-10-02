@@ -19,25 +19,29 @@
 ## Assignment 1
 
 Make sure that you have a Java JDK 17 installed and `JAVA_HOME` 
-set appropriately. Check by running
+set appropriately. (Tested with 17.0.6-tem) 
+Check by running
 
     java -version
 
-Run the tests
+Run the tests in _one_ of the following ways:
 
-    grailsw test-app
+    gradlew check -Dgeb.env=chrome
+    gradlew check -Dgeb.env=firefox
+    gradlew check -Dgeb.env=safari
 
-_this will take a while to download the first time_    
+_this will take a while to download the first time_ and some tests might fail. 
+That is ok for the moment.
         
 Run the application
 
-    grailsw run-app
+    gradlew bootRun
 
 Browse to http://localhost:8080/static/Home.html .
 
 ## Assignment 2
 
-Have a look at rooms/src/integration-test/groovy/rooms/HomeSecondSpec.groovy .
+Have a look at /src/integration-test/groovy/rooms/HomeSecondSpec.groovy .
 
 Write a test, that goes to http://www.fhnw.ch/de/
 and clicks on a link with text "Standorte und Kontakt".
@@ -47,13 +51,13 @@ Validate the page title.
 
 Have a look at 
 - http://localhost:8080/static/GradeCalculator.html
-- /src/integration-test/groovy/rooms/CalculatorSpec.groovy (note the commented line 26)
+- /src/integration-test/groovy/rooms/CalculatorSpec.groovy (note the commented line 28)
 - /src/main/resources/public/GradeCalculator.html 
 - /grails-app/controllers/rooms/CalculatorController.groovy
 - /views/calculator/CalculatorOutput.gsp (note the output placeholder)
 - /src/test/groovy/rooms/CalculatorControllerSpec.groovy
 
-Uncomment line 26 in the integration test and run `grailsw test-app`.
+Uncomment line 28 in the integration test and run the tests again.
 
 Open `/build/reports/tests/index.html` (or look at the internal test runner) 
 to see which test failed and why.
