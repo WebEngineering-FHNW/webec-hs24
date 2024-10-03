@@ -21,7 +21,7 @@ configurations {
     all {
         resolutionStrategy.eachDependency { DependencyResolveDetails details->
             if (details.requested.group == 'org.seleniumhq.selenium') {
-                details.useVersion('4.19.1')
+                details.useVersion('4.23.0')
             }
         }
     }
@@ -56,15 +56,14 @@ dependencies {
     testImplementation("org.grails:grails-gorm-testing-support")
     testImplementation("org.grails:grails-web-testing-support")
     testImplementation("org.grails.plugins:geb")
-    // next line added
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-safari-driver', version: '4.25.0'
-    testImplementation("org.seleniumhq.selenium:selenium-api:4.19.1")
-    testImplementation("org.seleniumhq.selenium:selenium-remote-driver:4.19.1")
-    testImplementation("org.seleniumhq.selenium:selenium-support:4.19.1")
+    testImplementation("org.seleniumhq.selenium:selenium-api:4.23.0")
+    testImplementation("org.seleniumhq.selenium:selenium-remote-driver:4.23.0")
+    testImplementation("org.seleniumhq.selenium:selenium-support:4.23.0")
     testImplementation("org.spockframework:spock-core")
-    testRuntimeOnly("org.seleniumhq.selenium:selenium-chrome-driver:4.19.1")
-    testRuntimeOnly("org.seleniumhq.selenium:selenium-firefox-driver:4.19.1")
-    testRuntimeOnly("org.seleniumhq.selenium:selenium-safari-driver:4.19.1")
+    testRuntimeOnly("org.seleniumhq.selenium:selenium-chrome-driver:4.23.0")
+    testRuntimeOnly("org.seleniumhq.selenium:selenium-firefox-driver:4.23.0")
+    testRuntimeOnly("org.seleniumhq.selenium:selenium-safari-driver:4.23.0")
+    testRuntimeOnly("org.seleniumhq.selenium:htmlunit3-driver:4.23.0")
     testImplementation("io.micronaut:micronaut-http-client")
 
 }

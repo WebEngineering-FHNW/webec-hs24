@@ -3,11 +3,15 @@ import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxOptions
 import org.openqa.selenium.safari.SafariDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 environments {
 
+    htmlUnit {
+        driver = { new HtmlUnitDriver() }
+    }
+
     // You need to configure in Safari -> Develop -> Allowed Remote Automation
-//  dk: disabled for the moment
     safari {
         driver = { new SafariDriver() }
     }
