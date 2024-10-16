@@ -8,7 +8,6 @@ import spock.lang.Ignore
  * See http://www.gebish.org/manual/current/ for more instructions
  */
 @Integration
-@Ignore
 class InPlaceCalculatorSpec extends GebSpec {
 
     void "Calculate in place with a self-refreshing view"() {
