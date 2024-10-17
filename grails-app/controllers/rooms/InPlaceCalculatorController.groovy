@@ -17,8 +17,8 @@ class InPlaceCalculatorController {
 }
 
 class CalculatorModel implements Validateable {
-    double en     = 0.0
-    double exam   = 0.0
+    double en     = 1.0
+    double exam   = 1.0
     String result = ""
 
     static constraints = {

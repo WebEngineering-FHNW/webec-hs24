@@ -8,7 +8,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver
 environments {
 
     htmlUnit {
-        driver = { new HtmlUnitDriver() }
+        driver = { new HtmlUnitDriver(true) }
     }
 
     // You need to configure in Safari -> Develop -> Allowed Remote Automation

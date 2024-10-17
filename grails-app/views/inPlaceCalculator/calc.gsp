@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="layout" content="form"/>
+  <meta name="layout" content="main"/>
   <title>
     In-Place Calculator
   </title>
@@ -24,10 +24,15 @@
           grid-column: 1 / -1;
           grid-template-columns: subgrid;
       }
+      .error {
+          background-color: hsl( 0deg, 60%, 80%);
+      }
   </style>
 </head>
 
 <body>
+
+
 
 <form action="/inPlaceCalculator/calc" method="get">
   <fieldset class="form padded">
