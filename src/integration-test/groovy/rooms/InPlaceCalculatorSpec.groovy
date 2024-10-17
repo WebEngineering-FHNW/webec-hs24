@@ -60,7 +60,7 @@ class InPlaceCalculatorSpec extends GebSpec {
             def alertWasRaised = withAlert {
                 $("form").en = 0.9                  // erroneous
                 $("form").exam = 3.0                // ok
-                $("input", type: "submit").click()  // sadly needed as stimulus
+                $("input", type: "submit").click()  // sadly needed as stimulus to trigger the onChange
             }
         then: "the in-place JS logic should kick in"
             $("#en").attr('class') == "error"

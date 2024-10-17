@@ -13,6 +13,7 @@ class CalculatorSpec extends GebSpec {
 
     void "Basic calculation"() {
         when:
+            go '/?lang=en'
             go '/static/GradeCalculator.html'
         then:
         	title == "Grade Calculator"
