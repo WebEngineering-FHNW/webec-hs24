@@ -19,6 +19,14 @@ class BootStrap {
             return
         }
 
+        Person dierk  = save(new Person(firstName: "Dierk",  lastName: "König"))
+        Person dieter = save(new Person(firstName: "Dieter", lastName: "Holz"))
+
+        Room r51c56 = save(new Room(name: "5.1C56", capacity: 30))
+        Room r52b53 = save(new Room(name: "5.2B53", capacity: 35))
+
+        save(new Booking(person: dierk, room:r51c56, date: today, timeSlot: Booking.AM ))
+
 
     }
 
