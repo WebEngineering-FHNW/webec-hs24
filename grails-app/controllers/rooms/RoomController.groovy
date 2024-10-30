@@ -2,7 +2,7 @@ package rooms
 
 class RoomController {
 
-    static scaffold = Room
+    static scaffold = Room // dynamic scaffold
 
 
 

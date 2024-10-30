@@ -1,5 +1,6 @@
 package rooms
 
+// Entität
 class Room {
     String  name
     Integer capacity

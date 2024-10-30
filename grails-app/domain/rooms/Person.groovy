@@ -1,5 +1,6 @@
 package rooms
 
+// Entität
 class Person {
     String firstName
     String lastName
