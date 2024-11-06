@@ -31,6 +31,18 @@
     </div>
 </nav>
 
+<div style="margin-left:2rem;">
+    <h2>
+        <sec:ifLoggedIn>
+          user: <sec:username/>
+          <g:link controller="logout">log out</g:link>
+        </sec:ifLoggedIn>
+        <sec:ifNotLoggedIn>
+          <g:link controller="login">log in</g:link>
+        </sec:ifNotLoggedIn>
+    </h2>
+</div>
+
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo">
