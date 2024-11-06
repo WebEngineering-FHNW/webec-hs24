@@ -11,7 +11,7 @@ import spock.lang.Ignore
 class CalculatorSpec extends GebSpec {
 
 
-    void "Basic calculation"() {
+    void "Basic calculation - will now fail because of login "() {
         when:
             go '/?lang=en'
             go '/static/GradeCalculator.html'
