@@ -39,6 +39,10 @@ dependencies {
     implementation("org.grails:grails-web-boot")
     implementation("org.grails.plugins:gsp")
     implementation("org.grails.plugins:hibernate5")
+
+    // see https://mvnrepository.com/artifact/org.grails.plugins/spring-security-core
+    implementation 'org.grails.plugins:spring-security-core:5.3.0' // added to include security
+
     implementation("org.grails.plugins:scaffolding")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework.boot:spring-boot-starter")
