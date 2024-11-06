@@ -34,7 +34,7 @@ class SecUserSecRole implements Serializable {
 	}
 
 	static SecUserSecRole get(long secUserId, long secRoleId) {
-		criteriaFor(secUserId, secRoleId).get()
+		(SecUserSecRole) criteriaFor(secUserId, secRoleId).get()
 	}
 
 	static boolean exists(long secUserId, long secRoleId) {
