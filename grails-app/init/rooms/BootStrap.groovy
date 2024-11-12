@@ -36,14 +36,14 @@ class BootStrap {
         assert SecUser.count()          == 2
         assert SecUserSecRole.count()   == 2
 
-        Person dierk  = save(new Person(firstName: "Dierk",  lastName: "König"))
+        Person dierk  = save(new Person(firstName: "Dierk",  lastName: "König", secUser: guest))
         Person dieter = save(new Person(firstName: "Dieter", lastName: "Holz"))
 
         Room r51c56 = save(new Room(name: "5.1C56", capacity: 30))
         Room r52b53 = save(new Room(name: "5.2B53", capacity: 35))
 
-        save(new Booking(person: dierk, room:r51c56, date: today, timeSlot: Booking.AM ))
-
+        save(new Booking(person: dierk,  room:r51c56, date: today,    timeSlot: Booking.AM ))
+        save(new Booking(person: dieter, room:r52b53, date: tomorrow, timeSlot: Booking.AM ))
 
     }
 
