@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        Jokes
+    </title>
+    <script>
+        function getJokes() {
+            const url = "https://sv443.net/jokeapi/v2/joke/Programming";
+            fetch(url)
+                .then( resp => resp.json() )
+                .then( json => {
+                    console.log(json);
+                    let text = json.joke;
+                    if ("twopart" === json.type) {
+                        text = json.setup + " - "+ json.delivery;
+                    }
+                    document.getElementById("target").textContent = text ;
+                 })
+                .catch( err => console.log(err));
+        }
+    </script>
+</head>
+<body>
+<h1>
+    Programmer jokes from <a href="https://sv443.net/jokeapi">jokeapi</a>
+</h1>
+
+<button onclick="getJokes();">Next</button>
+
+<div id="target">
+    fetching ...
+</div>
+
+<script>
+    getJokes(); // initial load
+</script>
+
+</body>
+</html>

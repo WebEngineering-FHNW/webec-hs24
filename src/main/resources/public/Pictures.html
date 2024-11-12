@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        Pictures
+    </title>
+    <script>
+        let photoNumber = 0;
+        let pageNumber  = 1;
+        let photoInfos = undefined;
+
+        function nextPhoto() {
+            if (undefined === photoInfos) {
+                findInterestingImages();                // mutually recursive
+                return;
+            }
+            const photo = photoInfos[photoNumber++];
+            if (photoNumber > 10) {
+                // todo: what to do about the page number here?
+                photoNumber = 0;
+                findInterestingImages();
+                return;
+            }
+            const pictureUrl = "http://static.flickr.com/" +
+               photo.server + "/" +
+               photo.id + "_" +
+               photo.secret + "_m.jpg";
+            document.getElementById("target").innerHTML = "<img alt=" + photo.title + " src='" +
+                                                          pictureUrl + "'><div> " +
+                                                          photo.title + "</div>";
+        }
+
+        function findInterestingImages() {
+            const url = "https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&per_page=10&page=" +
+                        pageNumber + "&format=json&nojsoncallback=1&api_key=d5d6d15bb498e649b134170184968b61";
+            fetch(url)
+                .then( resp => resp.json() )
+                .then( json => {
+                    photoInfos = json.photos.photo;
+                    nextPhoto();
+                 })
+                .catch( err => console.log(err));
+        }
+    </script>
+</head>
+<body>
+<h1>
+    Pictures
+</h1>
+
+<div id="target" onclick="nextPhoto()">
+    Click me to find interesting images on flickr.
+</div>
+
+
+</body>
+</html>
