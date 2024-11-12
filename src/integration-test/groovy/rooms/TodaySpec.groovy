@@ -10,7 +10,7 @@ import grails.testing.mixin.integration.Integration
 class TodaySpec extends GebSpec {
 
 
-    void "today is shown - will now fail because of login "() {
+    void "today is shown "() {
         when:
             go '/today/show'
         then:

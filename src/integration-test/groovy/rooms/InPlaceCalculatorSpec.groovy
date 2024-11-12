@@ -11,9 +11,9 @@ import spock.lang.Ignore
 @Integration
 class InPlaceCalculatorSpec extends GebSpec {
 
-    void "Calculate in place with a self-refreshing view - will now fail because of login "() {
+    void "Calculate in place with a self-refreshing view "() {
         when: "Go to start GSP page by calling it disguised as HTML"
-            go '/InPlaceCalculator.html?lang=en'
+            go '/inPlaceCalculator?lang=en'
         then:
         	title == "In-Place Calculator"
 
@@ -26,9 +26,9 @@ class InPlaceCalculatorSpec extends GebSpec {
             $("output").text() == "6"
     }
 
-    void "Invalid input shows error message and sets error class - will now fail because of login "() {
+    void "Invalid input shows error message and sets error class "() {
         when: "Go to start GSP page by calling it disguised as HTML"
-            go '/InPlaceCalculator.html?lang=en'
+        go '/inPlaceCalculator?lang=en'
         then:
         	title == "In-Place Calculator"
 
@@ -47,9 +47,9 @@ class InPlaceCalculatorSpec extends GebSpec {
 
 // Done: un-comment the commented lines below and see them failing, then make them pass
 
-    void "Invalid input is handled in-place by JS without submission - will now fail because of login "() {
+    void "Invalid input is handled in-place by JS without submission "() {
         given: "a valid state"
-            go '/InPlaceCalculator.html?lang=en'
+        go '/inPlaceCalculator?lang=en'
             $("form").en   = 3.0
             $("form").exam = 3.0
         when:

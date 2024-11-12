@@ -44,10 +44,17 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']],
- 	[pattern: "/login/auth",     access: ["permitAll"]],
- 	[pattern: "/spoof/**",       access: ["permitAll"]],
+
+ 	[pattern: "/login/auth",     		access: ["permitAll"]],
+ 	[pattern: "/spoof/**",       		access: ["permitAll"]],
+	[pattern: '/calculator/**',  		access: ['permitAll']],
+	[pattern: '/inPlaceCalculator/**', 	access: ['permitAll']],
+	[pattern: '/today/**',       		access: ['permitAll']],
+
  	[pattern: "/person/**" ,     access: ['ROLE_ADMIN']], // cannot use constant here :-(
  	[pattern: "/room/**"   ,     access: ['ROLE_ADMIN']],
- 	[pattern: "/**"        ,     access: ['ROLE_ADMIN', 'ROLE_GUEST']],
+
+ 	[pattern: "/**"        ,     access: ['ROLE_ADMIN', 'ROLE_GUEST']], // if not in the whitelist above, this is the fallback
+
  ]
 
