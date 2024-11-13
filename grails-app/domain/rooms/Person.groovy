@@ -1,6 +1,9 @@
 package rooms
 
+import grails.rest.Resource
+
 // Entität
+@Resource(uri = '/persons', formats = ['json', 'xml'])
 class Person {
     String  firstName
     String  lastName

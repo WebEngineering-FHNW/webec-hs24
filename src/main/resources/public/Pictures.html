@@ -11,7 +11,7 @@
         let photoInfos = undefined;
 
         function nextPhoto() {
-            if (undefined === photoInfos) {
+            if (undefined === photoInfos) {             // yoda conditional
                 findInterestingImages();                // mutually recursive
                 return;
             }
@@ -26,7 +26,7 @@
                photo.server + "/" +
                photo.id + "_" +
                photo.secret + "_m.jpg";
-            document.getElementById("target").innerHTML = "<img alt=" + photo.title + " src='" +
+            document.getElementById("target").innerHTML = "<img alt='" + "flickr dynamic image" + "' src='" +
                                                           pictureUrl + "'><div> " +
                                                           photo.title + "</div>";
         }
