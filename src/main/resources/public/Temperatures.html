@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        Temperature Converter with JavaScript
+    </title>
+    <style>
+        main {
+            margin: 2rem;
+            font-family: "Helvetica Neue Light", sans-serif;
+            letter-spacing: .05em;
+        }
+        h2 {
+            color: hsl(240 60% 60% );
+        }
+        .converter-grid {
+            display:                grid;
+            grid-template-columns:  max-content 6ch;
+            gap:                    0.5em 2em;
+            margin-left: 2rem;
+        }
+        input[type=number] {
+            text-align: right;
+            border: 1px solid lightgray;
+        }
+    </style>
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return Math.floor(celsius * 1.8 + 32);
+        }
+        function fahrenheitToCelsius(fahrenheit) {
+            return Math.floor((fahrenheit - 32) / 1.8);
+        }
+    </script>
+</head>
+<body>
+<main>
+    <h2>
+        Temperature Converter with JavaScript
+    </h2>
+
+    <form class="converter-grid">
+
+        <label for='celsius'>Celsius</label>
+        <input
+            autofocus
+            id      = "celsius"
+            name    = "celsius"
+            type    = "number"
+            step    = "1"
+            value   = "0"
+            onchange= "document.getElementById('fahrenheit').value = celsiusToFahrenheit(value);"
+        >
+
+        <label for='fahrenheit'>Fahrenheit</label>
+        <input
+            id      = "fahrenheit"
+            name    = "fahrenheit"
+            type    = "number"
+            step    = "1"
+            value   = "32"
+            onchange= "document.getElementById('celsius').value = fahrenheitToCelsius(value);"
+        >
+
+    </form>
+</main>
+</body>
+</html>
